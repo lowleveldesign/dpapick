@@ -33,6 +33,10 @@ information such as:
   * pyASN1 for the RSA key pair manipulation
       see http://pyasn1.sourceforge.net/
 
+*Note for Windows users*: the easiest way to install M2Crypto is to use the M2CryptoWin32 (M2CryptoWin64)
+package with precompiled binaries (more info <https://the.randomengineer.com/2014/07/29/ssl-for-python-m2crypto-on-windows/>).
+You will also need the Registry package.
+
 We also recommend the use of MoonSols Windows Memory Toolkit to convert
 hibernation file to usable memory dumps and be able to extract credentials
 from it.

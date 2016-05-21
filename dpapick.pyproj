@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{46889765-681d-41b5-bf40-dc96f802ec89}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>dpapidec.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>{2af0f10d-7135-4994-9156-5d01c9c11b7e}</InterpreterId>
+    <InterpreterVersion>2.7</InterpreterVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="LICENCE.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="depends\CFPropertyList\CFPropertyList\CFPListErrors.py" />
+    <Compile Include="depends\CFPropertyList\CFPropertyList\CFPropertyList.py" />
+    <Compile Include="depends\CFPropertyList\CFPropertyList\CFTypes.py" />
+    <Compile Include="depends\CFPropertyList\CFPropertyList\__init__.py" />
+    <Compile Include="depends\CFPropertyList\setup.py" />
+    <Compile Include="depends\CFPropertyList\tests\all.py" />
+    <Compile Include="depends\CFPropertyList\tests\reference.py" />
+    <Compile Include="depends\CFPropertyList\tests\test_array.py" />
+    <Compile Include="depends\CFPropertyList\tests\test_boolean.py" />
+    <Compile Include="depends\CFPropertyList\tests\test_data.py" />
+    <Compile Include="depends\CFPropertyList\tests\test_dictionary.py" />
+    <Compile Include="depends\CFPropertyList\tests\test_file.py" />
+    <Compile Include="depends\CFPropertyList\tests\test_integer.py" />
+    <Compile Include="depends\CFPropertyList\tests\test_offsets.py" />
+    <Compile Include="depends\CFPropertyList\tests\test_real.py" />
+    <Compile Include="depends\CFPropertyList\tests\test_string.py" />
+    <Compile Include="dpapidec.py" />
+    <Compile Include="DPAPI\Core\blob.py" />
+    <Compile Include="DPAPI\Core\credhist.py" />
+    <Compile Include="DPAPI\Core\crypto.py" />
+    <Compile Include="DPAPI\Core\eater.py" />
+    <Compile Include="DPAPI\Core\masterkey.py" />
+    <Compile Include="DPAPI\Core\registry.py" />
+    <Compile Include="DPAPI\Core\__init__.py" />
+    <Compile Include="DPAPI\probe.py" />
+    <Compile Include="DPAPI\Probes\certificate.py" />
+    <Compile Include="DPAPI\Probes\chrome.py" />
+    <Compile Include="DPAPI\Probes\credstore.py" />
+    <Compile Include="DPAPI\Probes\dropbox.py" />
+    <Compile Include="DPAPI\Probes\gtalk.py" />
+    <Compile Include="DPAPI\Probes\icloud.py" />
+    <Compile Include="DPAPI\Probes\IE7.py" />
+    <Compile Include="DPAPI\Probes\RDP.py" />
+    <Compile Include="DPAPI\Probes\safari.py" />
+    <Compile Include="DPAPI\Probes\skype.py" />
+    <Compile Include="DPAPI\Probes\wifi.py" />
+    <Compile Include="DPAPI\Probes\__init__.py" />
+    <Compile Include="DPAPI\__init__.py" />
+    <Compile Include="setup.py" />
+    <Compile Include="tests\all.py" />
+    <Compile Include="tests\blob.py" />
+    <Compile Include="tests\credhist.py" />
+    <Compile Include="tests\crypto.py" />
+    <Compile Include="tests\masterkey.py" />
+    <Compile Include="tests\registry.py" />
+    <Compile Include="tests\__init__.py" />
+    <Compile Include="__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="depends\" />
+    <Folder Include="depends\CFPropertyList" />
+    <Folder Include="depends\CFPropertyList\CFPropertyList" />
+    <Folder Include="depends\CFPropertyList\tests" />
+    <Folder Include="DPAPI" />
+    <Folder Include="DPAPI\Core" />
+    <Folder Include="DPAPI\Probes" />
+    <Folder Include="tests" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="{2af0f10d-7135-4994-9156-5d01c9c11b7e}\2.7" />
+  </ItemGroup>
+  <Import Project="$(PtvsTargetsFile)" Condition="Exists($(PtvsTargetsFile))" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="!Exists($(PtvsTargetsFile))" />
+</Project>
